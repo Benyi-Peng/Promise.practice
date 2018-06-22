@@ -1,0 +1,557 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8EA1CB4F20DD185500093435 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EA1CB4E20DD185500093435 /* AppDelegate.m */; };
+		8EA1CB5220DD185500093435 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EA1CB5120DD185500093435 /* ViewController.m */; };
+		8EA1CB5520DD185500093435 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EA1CB5320DD185500093435 /* Main.storyboard */; };
+		8EA1CB5720DD185500093435 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EA1CB5620DD185500093435 /* Assets.xcassets */; };
+		8EA1CB5A20DD185500093435 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EA1CB5820DD185500093435 /* LaunchScreen.storyboard */; };
+		8EA1CB5D20DD185500093435 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EA1CB5C20DD185500093435 /* main.m */; };
+		8EA1CB6720DD185500093435 /* promise_practiseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EA1CB6620DD185500093435 /* promise_practiseTests.m */; };
+		8EA1CB7220DD185500093435 /* promise_practiseUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EA1CB7120DD185500093435 /* promise_practiseUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8EA1CB6320DD185500093435 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8EA1CB4220DD185500093435 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8EA1CB4920DD185500093435;
+			remoteInfo = promise.practise;
+		};
+		8EA1CB6E20DD185500093435 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8EA1CB4220DD185500093435 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8EA1CB4920DD185500093435;
+			remoteInfo = promise.practise;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8EA1CB4A20DD185500093435 /* promise.practise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = promise.practise.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8EA1CB4D20DD185500093435 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		8EA1CB4E20DD185500093435 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		8EA1CB5020DD185500093435 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		8EA1CB5120DD185500093435 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		8EA1CB5420DD185500093435 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8EA1CB5620DD185500093435 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8EA1CB5920DD185500093435 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8EA1CB5B20DD185500093435 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8EA1CB5C20DD185500093435 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8EA1CB6220DD185500093435 /* promise.practiseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = promise.practiseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8EA1CB6620DD185500093435 /* promise_practiseTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = promise_practiseTests.m; sourceTree = "<group>"; };
+		8EA1CB6820DD185500093435 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8EA1CB6D20DD185500093435 /* promise.practiseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = promise.practiseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8EA1CB7120DD185500093435 /* promise_practiseUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = promise_practiseUITests.m; sourceTree = "<group>"; };
+		8EA1CB7320DD185500093435 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8EA1CB4720DD185500093435 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8EA1CB5F20DD185500093435 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8EA1CB6A20DD185500093435 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8EA1CB4120DD185500093435 = {
+			isa = PBXGroup;
+			children = (
+				8EA1CB4C20DD185500093435 /* promise.practise */,
+				8EA1CB6520DD185500093435 /* promise.practiseTests */,
+				8EA1CB7020DD185500093435 /* promise.practiseUITests */,
+				8EA1CB4B20DD185500093435 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8EA1CB4B20DD185500093435 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8EA1CB4A20DD185500093435 /* promise.practise.app */,
+				8EA1CB6220DD185500093435 /* promise.practiseTests.xctest */,
+				8EA1CB6D20DD185500093435 /* promise.practiseUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8EA1CB4C20DD185500093435 /* promise.practise */ = {
+			isa = PBXGroup;
+			children = (
+				8EA1CB4D20DD185500093435 /* AppDelegate.h */,
+				8EA1CB4E20DD185500093435 /* AppDelegate.m */,
+				8EA1CB5020DD185500093435 /* ViewController.h */,
+				8EA1CB5120DD185500093435 /* ViewController.m */,
+				8EA1CB5320DD185500093435 /* Main.storyboard */,
+				8EA1CB5620DD185500093435 /* Assets.xcassets */,
+				8EA1CB5820DD185500093435 /* LaunchScreen.storyboard */,
+				8EA1CB5B20DD185500093435 /* Info.plist */,
+				8EA1CB5C20DD185500093435 /* main.m */,
+			);
+			path = promise.practise;
+			sourceTree = "<group>";
+		};
+		8EA1CB6520DD185500093435 /* promise.practiseTests */ = {
+			isa = PBXGroup;
+			children = (
+				8EA1CB6620DD185500093435 /* promise_practiseTests.m */,
+				8EA1CB6820DD185500093435 /* Info.plist */,
+			);
+			path = promise.practiseTests;
+			sourceTree = "<group>";
+		};
+		8EA1CB7020DD185500093435 /* promise.practiseUITests */ = {
+			isa = PBXGroup;
+			children = (
+				8EA1CB7120DD185500093435 /* promise_practiseUITests.m */,
+				8EA1CB7320DD185500093435 /* Info.plist */,
+			);
+			path = promise.practiseUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8EA1CB4920DD185500093435 /* promise.practise */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8EA1CB7620DD185500093435 /* Build configuration list for PBXNativeTarget "promise.practise" */;
+			buildPhases = (
+				8EA1CB4620DD185500093435 /* Sources */,
+				8EA1CB4720DD185500093435 /* Frameworks */,
+				8EA1CB4820DD185500093435 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = promise.practise;
+			productName = promise.practise;
+			productReference = 8EA1CB4A20DD185500093435 /* promise.practise.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8EA1CB6120DD185500093435 /* promise.practiseTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8EA1CB7920DD185500093435 /* Build configuration list for PBXNativeTarget "promise.practiseTests" */;
+			buildPhases = (
+				8EA1CB5E20DD185500093435 /* Sources */,
+				8EA1CB5F20DD185500093435 /* Frameworks */,
+				8EA1CB6020DD185500093435 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8EA1CB6420DD185500093435 /* PBXTargetDependency */,
+			);
+			name = promise.practiseTests;
+			productName = promise.practiseTests;
+			productReference = 8EA1CB6220DD185500093435 /* promise.practiseTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8EA1CB6C20DD185500093435 /* promise.practiseUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8EA1CB7C20DD185500093435 /* Build configuration list for PBXNativeTarget "promise.practiseUITests" */;
+			buildPhases = (
+				8EA1CB6920DD185500093435 /* Sources */,
+				8EA1CB6A20DD185500093435 /* Frameworks */,
+				8EA1CB6B20DD185500093435 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8EA1CB6F20DD185500093435 /* PBXTargetDependency */,
+			);
+			name = promise.practiseUITests;
+			productName = promise.practiseUITests;
+			productReference = 8EA1CB6D20DD185500093435 /* promise.practiseUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8EA1CB4220DD185500093435 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = oe;
+				TargetAttributes = {
+					8EA1CB4920DD185500093435 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					8EA1CB6120DD185500093435 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 8EA1CB4920DD185500093435;
+					};
+					8EA1CB6C20DD185500093435 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 8EA1CB4920DD185500093435;
+					};
+				};
+			};
+			buildConfigurationList = 8EA1CB4520DD185500093435 /* Build configuration list for PBXProject "promise.practise" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8EA1CB4120DD185500093435;
+			productRefGroup = 8EA1CB4B20DD185500093435 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8EA1CB4920DD185500093435 /* promise.practise */,
+				8EA1CB6120DD185500093435 /* promise.practiseTests */,
+				8EA1CB6C20DD185500093435 /* promise.practiseUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8EA1CB4820DD185500093435 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8EA1CB5A20DD185500093435 /* LaunchScreen.storyboard in Resources */,
+				8EA1CB5720DD185500093435 /* Assets.xcassets in Resources */,
+				8EA1CB5520DD185500093435 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8EA1CB6020DD185500093435 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8EA1CB6B20DD185500093435 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8EA1CB4620DD185500093435 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8EA1CB5220DD185500093435 /* ViewController.m in Sources */,
+				8EA1CB5D20DD185500093435 /* main.m in Sources */,
+				8EA1CB4F20DD185500093435 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8EA1CB5E20DD185500093435 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8EA1CB6720DD185500093435 /* promise_practiseTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8EA1CB6920DD185500093435 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8EA1CB7220DD185500093435 /* promise_practiseUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8EA1CB6420DD185500093435 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8EA1CB4920DD185500093435 /* promise.practise */;
+			targetProxy = 8EA1CB6320DD185500093435 /* PBXContainerItemProxy */;
+		};
+		8EA1CB6F20DD185500093435 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8EA1CB4920DD185500093435 /* promise.practise */;
+			targetProxy = 8EA1CB6E20DD185500093435 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8EA1CB5320DD185500093435 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8EA1CB5420DD185500093435 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8EA1CB5820DD185500093435 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8EA1CB5920DD185500093435 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8EA1CB7420DD185500093435 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		8EA1CB7520DD185500093435 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8EA1CB7720DD185500093435 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W7U2F6ENJ2;
+				INFOPLIST_FILE = promise.practise/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.oe.promise-practise";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8EA1CB7820DD185500093435 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W7U2F6ENJ2;
+				INFOPLIST_FILE = promise.practise/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.oe.promise-practise";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		8EA1CB7A20DD185500093435 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W7U2F6ENJ2;
+				INFOPLIST_FILE = promise.practiseTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.oe.promise-practiseTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/promise.practise.app/promise.practise";
+			};
+			name = Debug;
+		};
+		8EA1CB7B20DD185500093435 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W7U2F6ENJ2;
+				INFOPLIST_FILE = promise.practiseTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.oe.promise-practiseTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/promise.practise.app/promise.practise";
+			};
+			name = Release;
+		};
+		8EA1CB7D20DD185500093435 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W7U2F6ENJ2;
+				INFOPLIST_FILE = promise.practiseUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.oe.promise-practiseUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = promise.practise;
+			};
+			name = Debug;
+		};
+		8EA1CB7E20DD185500093435 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W7U2F6ENJ2;
+				INFOPLIST_FILE = promise.practiseUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.oe.promise-practiseUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = promise.practise;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8EA1CB4520DD185500093435 /* Build configuration list for PBXProject "promise.practise" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8EA1CB7420DD185500093435 /* Debug */,
+				8EA1CB7520DD185500093435 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8EA1CB7620DD185500093435 /* Build configuration list for PBXNativeTarget "promise.practise" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8EA1CB7720DD185500093435 /* Debug */,
+				8EA1CB7820DD185500093435 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8EA1CB7920DD185500093435 /* Build configuration list for PBXNativeTarget "promise.practiseTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8EA1CB7A20DD185500093435 /* Debug */,
+				8EA1CB7B20DD185500093435 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8EA1CB7C20DD185500093435 /* Build configuration list for PBXNativeTarget "promise.practiseUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8EA1CB7D20DD185500093435 /* Debug */,
+				8EA1CB7E20DD185500093435 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8EA1CB4220DD185500093435 /* Project object */;
+}
