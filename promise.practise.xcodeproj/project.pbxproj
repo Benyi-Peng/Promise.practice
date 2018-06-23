@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		283B34F9797F7FE6B1104022 /* Pods_promise_practise.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B52D6C781A7F0FAB40426405 /* Pods_promise_practise.framework */; };
+		75447DEB1A816B2B9FE63BDD /* Pods_promise_practiseTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA8C476C00B39C4654FDE115 /* Pods_promise_practiseTests.framework */; };
 		8EA1CB4F20DD185500093435 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EA1CB4E20DD185500093435 /* AppDelegate.m */; };
 		8EA1CB5220DD185500093435 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EA1CB5120DD185500093435 /* ViewController.m */; };
 		8EA1CB5520DD185500093435 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EA1CB5320DD185500093435 /* Main.storyboard */; };
@@ -15,6 +17,8 @@
 		8EA1CB5D20DD185500093435 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EA1CB5C20DD185500093435 /* main.m */; };
 		8EA1CB6720DD185500093435 /* promise_practiseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EA1CB6620DD185500093435 /* promise_practiseTests.m */; };
 		8EA1CB7220DD185500093435 /* promise_practiseUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EA1CB7120DD185500093435 /* promise_practiseUITests.m */; };
+		8EA1CB8120DDD98A00093435 /* SomePromise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA1CB8020DDD98A00093435 /* SomePromise.swift */; };
+		B77F3AA5C6735EF994DC0EF9 /* Pods_promise_practiseUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0282940C2DA6738DE3B6FF9F /* Pods_promise_practiseUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +39,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0282940C2DA6738DE3B6FF9F /* Pods_promise_practiseUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_promise_practiseUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		255E5A28139BBCBABB835FCF /* Pods-promise.practiseTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-promise.practiseTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-promise.practiseTests/Pods-promise.practiseTests.release.xcconfig"; sourceTree = "<group>"; };
+		34DA51CF9AB3D989A25B2F3E /* Pods-promise.practiseTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-promise.practiseTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-promise.practiseTests/Pods-promise.practiseTests.debug.xcconfig"; sourceTree = "<group>"; };
+		38530BEAC49D9380652D8D80 /* Pods-promise.practiseUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-promise.practiseUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-promise.practiseUITests/Pods-promise.practiseUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		3B5FEE032DC556A85750C7E7 /* Pods-promise.practise.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-promise.practise.debug.xcconfig"; path = "Pods/Target Support Files/Pods-promise.practise/Pods-promise.practise.debug.xcconfig"; sourceTree = "<group>"; };
+		4140E70EED105CAB00838258 /* Pods-promise.practiseUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-promise.practiseUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-promise.practiseUITests/Pods-promise.practiseUITests.release.xcconfig"; sourceTree = "<group>"; };
+		829FF55455236A26253E6B57 /* Pods-promise.practise.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-promise.practise.release.xcconfig"; path = "Pods/Target Support Files/Pods-promise.practise/Pods-promise.practise.release.xcconfig"; sourceTree = "<group>"; };
 		8EA1CB4A20DD185500093435 /* promise.practise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = promise.practise.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EA1CB4D20DD185500093435 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8EA1CB4E20DD185500093435 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -51,6 +62,10 @@
 		8EA1CB6D20DD185500093435 /* promise.practiseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = promise.practiseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EA1CB7120DD185500093435 /* promise_practiseUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = promise_practiseUITests.m; sourceTree = "<group>"; };
 		8EA1CB7320DD185500093435 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8EA1CB7F20DDD98A00093435 /* promise.practise-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "promise.practise-Bridging-Header.h"; sourceTree = "<group>"; };
+		8EA1CB8020DDD98A00093435 /* SomePromise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SomePromise.swift; sourceTree = "<group>"; };
+		B52D6C781A7F0FAB40426405 /* Pods_promise_practise.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_promise_practise.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA8C476C00B39C4654FDE115 /* Pods_promise_practiseTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_promise_practiseTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				283B34F9797F7FE6B1104022 /* Pods_promise_practise.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75447DEB1A816B2B9FE63BDD /* Pods_promise_practiseTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,12 +89,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B77F3AA5C6735EF994DC0EF9 /* Pods_promise_practiseUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		278AC518053B8133002C4F97 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B52D6C781A7F0FAB40426405 /* Pods_promise_practise.framework */,
+				EA8C476C00B39C4654FDE115 /* Pods_promise_practiseTests.framework */,
+				0282940C2DA6738DE3B6FF9F /* Pods_promise_practiseUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8EA1CB4120DD185500093435 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +113,8 @@
 				8EA1CB6520DD185500093435 /* promise.practiseTests */,
 				8EA1CB7020DD185500093435 /* promise.practiseUITests */,
 				8EA1CB4B20DD185500093435 /* Products */,
+				E9EDA6ECDE1775BE9328D9EE /* Pods */,
+				278AC518053B8133002C4F97 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,11 +135,13 @@
 				8EA1CB4E20DD185500093435 /* AppDelegate.m */,
 				8EA1CB5020DD185500093435 /* ViewController.h */,
 				8EA1CB5120DD185500093435 /* ViewController.m */,
+				8EA1CB8020DDD98A00093435 /* SomePromise.swift */,
 				8EA1CB5320DD185500093435 /* Main.storyboard */,
 				8EA1CB5620DD185500093435 /* Assets.xcassets */,
 				8EA1CB5820DD185500093435 /* LaunchScreen.storyboard */,
 				8EA1CB5B20DD185500093435 /* Info.plist */,
 				8EA1CB5C20DD185500093435 /* main.m */,
+				8EA1CB7F20DDD98A00093435 /* promise.practise-Bridging-Header.h */,
 			);
 			path = promise.practise;
 			sourceTree = "<group>";
@@ -132,6 +164,19 @@
 			path = promise.practiseUITests;
 			sourceTree = "<group>";
 		};
+		E9EDA6ECDE1775BE9328D9EE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3B5FEE032DC556A85750C7E7 /* Pods-promise.practise.debug.xcconfig */,
+				829FF55455236A26253E6B57 /* Pods-promise.practise.release.xcconfig */,
+				34DA51CF9AB3D989A25B2F3E /* Pods-promise.practiseTests.debug.xcconfig */,
+				255E5A28139BBCBABB835FCF /* Pods-promise.practiseTests.release.xcconfig */,
+				38530BEAC49D9380652D8D80 /* Pods-promise.practiseUITests.debug.xcconfig */,
+				4140E70EED105CAB00838258 /* Pods-promise.practiseUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -139,9 +184,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8EA1CB7620DD185500093435 /* Build configuration list for PBXNativeTarget "promise.practise" */;
 			buildPhases = (
+				0D9CCC85A6A266CDC6FC0282 /* [CP] Check Pods Manifest.lock */,
 				8EA1CB4620DD185500093435 /* Sources */,
 				8EA1CB4720DD185500093435 /* Frameworks */,
 				8EA1CB4820DD185500093435 /* Resources */,
+				7979024F60357C91A67D5676 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -156,6 +203,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8EA1CB7920DD185500093435 /* Build configuration list for PBXNativeTarget "promise.practiseTests" */;
 			buildPhases = (
+				370403A7A844F1975A60DC92 /* [CP] Check Pods Manifest.lock */,
 				8EA1CB5E20DD185500093435 /* Sources */,
 				8EA1CB5F20DD185500093435 /* Frameworks */,
 				8EA1CB6020DD185500093435 /* Resources */,
@@ -174,6 +222,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8EA1CB7C20DD185500093435 /* Build configuration list for PBXNativeTarget "promise.practiseUITests" */;
 			buildPhases = (
+				23E82AE287CC26E27AEC8DD0 /* [CP] Check Pods Manifest.lock */,
 				8EA1CB6920DD185500093435 /* Sources */,
 				8EA1CB6A20DD185500093435 /* Frameworks */,
 				8EA1CB6B20DD185500093435 /* Resources */,
@@ -199,6 +248,7 @@
 				TargetAttributes = {
 					8EA1CB4920DD185500093435 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 					8EA1CB6120DD185500093435 = {
@@ -260,6 +310,81 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0D9CCC85A6A266CDC6FC0282 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-promise.practise-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		23E82AE287CC26E27AEC8DD0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-promise.practiseUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		370403A7A844F1975A60DC92 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-promise.practiseTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7979024F60357C91A67D5676 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-promise.practise/Pods-promise.practise-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-promise.practise/Pods-promise.practise-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8EA1CB4620DD185500093435 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -268,6 +393,7 @@
 				8EA1CB5220DD185500093435 /* ViewController.m in Sources */,
 				8EA1CB5D20DD185500093435 /* main.m in Sources */,
 				8EA1CB4F20DD185500093435 /* AppDelegate.m in Sources */,
+				8EA1CB8120DDD98A00093435 /* SomePromise.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,35 +554,46 @@
 		};
 		8EA1CB7720DD185500093435 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3B5FEE032DC556A85750C7E7 /* Pods-promise.practise.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W7U2F6ENJ2;
 				INFOPLIST_FILE = promise.practise/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.oe.promise-practise";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "promise.practise/promise.practise-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		8EA1CB7820DD185500093435 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 829FF55455236A26253E6B57 /* Pods-promise.practise.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W7U2F6ENJ2;
 				INFOPLIST_FILE = promise.practise/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.oe.promise-practise";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "promise.practise/promise.practise-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
 		8EA1CB7A20DD185500093435 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 34DA51CF9AB3D989A25B2F3E /* Pods-promise.practiseTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W7U2F6ENJ2;
@@ -471,7 +608,9 @@
 		};
 		8EA1CB7B20DD185500093435 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 255E5A28139BBCBABB835FCF /* Pods-promise.practiseTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W7U2F6ENJ2;
@@ -486,7 +625,9 @@
 		};
 		8EA1CB7D20DD185500093435 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 38530BEAC49D9380652D8D80 /* Pods-promise.practiseUITests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W7U2F6ENJ2;
 				INFOPLIST_FILE = promise.practiseUITests/Info.plist;
@@ -500,7 +641,9 @@
 		};
 		8EA1CB7E20DD185500093435 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4140E70EED105CAB00838258 /* Pods-promise.practiseUITests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W7U2F6ENJ2;
 				INFOPLIST_FILE = promise.practiseUITests/Info.plist;
