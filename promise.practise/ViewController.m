@@ -9,6 +9,7 @@
 #import "ViewController.h"
 
 #import <PromiseKit/PromiseKit.h>
+#import <PromiseKit/PromiseKit-Swift.h>
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *greet1;
@@ -38,6 +39,10 @@
 //    AnyPromise *p = [[self getFirstGreet] then](@1);
 //    [[[self getFirstGreet] then](@"Any thing...") then];
 //    [self getFirstGreet].then(@1).then(@2).then(@3);
+    
+    [AnyPromise promiseWithAdapterBlock:^(PMKAdapter  _Nonnull adapter) {
+        adapter(nil, nil);
+    }];
 }
 
 

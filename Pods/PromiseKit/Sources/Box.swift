@@ -34,6 +34,13 @@ class EmptyBox<T>: Box<T> {
     private let barrier = DispatchQueue(label: "org.promisekit.barrier", attributes: .concurrent)
 
     override func seal(_ value: T) {
+        
+        /*
+         box.sealant
+         如果是已决(resolved)，什么都不干
+         如果是未决(pending)，则将 未决状态下pipe进来的闭包全部执行一次, 并将自己的 sealant 的状态改为 已决。
+         */
+        
         var handlers: Handlers<T>!
         barrier.sync(flags: .barrier) {
             guard case .pending(let _handlers) = self.sealant else {
@@ -57,6 +64,9 @@ class EmptyBox<T>: Box<T> {
     }
 
     override func inspect() -> Sealant<T> {
+        /*
+         获取当前的 sealant 的状态 
+         */
         var rv: Sealant<T>!
         barrier.sync {
             rv = self.sealant
@@ -65,6 +75,10 @@ class EmptyBox<T>: Box<T> {
     }
 
     override func inspect(_ body: (Sealant<T>) -> Void) {
+        /*
+         把box的 sealant 传递给外界去操作 。代码看起来挺怪异，但
+         是作用就是把 box.sealant 传给 body 闭包去做一些操作，仅此而已。
+         */
         var sealed = false
         barrier.sync(flags: .barrier) {
             switch sealant {
