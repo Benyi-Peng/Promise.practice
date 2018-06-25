@@ -18,6 +18,8 @@ import Foundation
          body({(sth: Any?) in
          
          })
+         这个尾随闭包，就是 resolve block. 是在异步业务逻辑完成的时候调用的。
+         resolve block 执行的参数， 就是要reslove 的 value. 
         */
         body {
             if let p = $0 as? AnyPromise {
@@ -42,11 +44,15 @@ import Foundation
              initWithResolver
              __pipe
              
+             在 Promise chain 的前一个 Promise
              */
             self.__pipe { obj in
+                /*
+                 obj 就是 上一个 promise resolve 的 value
+                 */
                 if !(obj is NSError) {
                     q.async {
-                        resolve(execute(obj))
+                        resolve(execute(obj)) // == reslove(PMKCallVariadicBlock(block, obj)). block 就是 then 里面的业务逻辑 
                     }
                 } else {
                     resolve(obj)
@@ -82,6 +88,9 @@ import Foundation
 
     /// Internal, do not use! Some behaviors undefined.
     @objc public func __pipe(_ to: @escaping (Any?) -> Void) {
+        /*
+         在我看来，就是调用了 to(obj) 
+         */
         let to = { (obj: Any?) -> Void in
             if obj is NSError {
                 to(obj)  // or we cannot determine if objects are errors in objc land

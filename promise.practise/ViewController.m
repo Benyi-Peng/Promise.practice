@@ -9,6 +9,7 @@
 #import "ViewController.h"
 
 #import <PromiseKit/PromiseKit.h>
+#import <PromiseKit/PromiseKit-Swift.h>
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *greet1;
@@ -39,7 +40,6 @@
 //    [[[self getFirstGreet] then](@"Any thing...") then];
 //    [self getFirstGreet].then(@1).then(@2).then(@3);
     
-    
     [AnyPromise promiseWithResolverBlock:^(PMKResolver _Nonnull resolve) {
         dispatch_async(dispatch_get_global_queue(0, 0), ^{
             sleep(3);
@@ -66,7 +66,6 @@
     }).catch(^(NSError *err){
         NSLog(@"Error : %@", err);
     });
-    
     
 }
 
