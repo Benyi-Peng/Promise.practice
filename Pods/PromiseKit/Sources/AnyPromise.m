@@ -35,7 +35,7 @@ NSString *const PMKErrorDomain = @"PMKErrorDomain";
 }
 
 + (instancetype)promiseWithValue:(id)value {
-    //TODO provide a more efficient route for sealed promises
+    // TODO provide a more efficient route for sealed promises
     id d = [[__AnyPromise alloc] initWithResolver:^(void (^resolve)(id)) {
         resolve(value);
     }];
@@ -53,8 +53,11 @@ NSString *const PMKErrorDomain = @"PMKErrorDomain";
 }
 
 - (AnyPromise *(^)(id))then {
+    // block 就是 then 后面接的业务逻辑block,
     return ^(id block) {
+        //
         return [self->d __thenOn:dispatch_get_main_queue() execute:^(id obj) {
+            
             return PMKCallVariadicBlock(block, obj);
         }];
     };

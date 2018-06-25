@@ -28,8 +28,21 @@ import Foundation
         }
     }
 
+    /*
+     尾触发
+     */
     @objc public func __thenOn(_ q: DispatchQueue, execute: @escaping (Any?) -> Any?) -> AnyPromise {
         return AnyPromise(__D: __AnyPromise(resolver: { resolve in
+            /*
+             此处是立即调用的代码
+             
+             then(block)
+             self.d __thenOn
+             AnyPromise
+             initWithResolver
+             __pipe
+             
+             */
             self.__pipe { obj in
                 if !(obj is NSError) {
                     q.async {

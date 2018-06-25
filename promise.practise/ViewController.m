@@ -25,19 +25,49 @@
 //    [[self getFirstGreet] then:^(id x){
 //
 //    }];
-    [self getGreeting].then(^(NSString *name){
-        [self getSecondPeople:name];
-//        return [NSError errorWithDomain:@"First stage error" code:100 userInfo:@{@"msg":@"You stupid."}];
-        return nil;
-    }).then(^(){
-        NSLog(@"The second stage ...");
-    }).catch(^(NSError *error){
-        NSLog(@"error :%@", error);
-    });
+//    [self getGreeting].then(^(NSString *name){
+//        [self getSecondPeople:name];
+////        return [NSError errorWithDomain:@"First stage error" code:100 userInfo:@{@"msg":@"You stupid."}];
+//        return nil;
+//    }).then(^(){
+//        NSLog(@"The second stage ...");
+//    }).catch(^(NSError *error){
+//        NSLog(@"error :%@", error);
+//    });
     
 //    AnyPromise *p = [[self getFirstGreet] then](@1);
 //    [[[self getFirstGreet] then](@"Any thing...") then];
 //    [self getFirstGreet].then(@1).then(@2).then(@3);
+    
+    
+    [AnyPromise promiseWithResolverBlock:^(PMKResolver _Nonnull resolve) {
+        dispatch_async(dispatch_get_global_queue(0, 0), ^{
+            sleep(3);
+            resolve(@"First");
+        });
+    }].thenOn(dispatch_get_global_queue(0, 0) ,^(NSString *str){
+        sleep(3);
+        NSLog(@"then1 : %@", str);
+        return @"Second";
+    }).thenOn(dispatch_get_global_queue(0, 0) ,^(NSString *str){
+        sleep(3);
+        NSLog(@"then2 : %@", str);
+        return @"Third";
+    }).thenOn(dispatch_get_global_queue(0, 0) ,^(NSString *str){
+        sleep(3);
+        NSLog(@"then3 : %@", str);
+        return @"Forth";
+    }).then(^(NSString *str){
+        NSLog(@"then4 : %@", str);
+        return 0 ? @"Fifth" : [NSError errorWithDomain:@"THEN4 ERROR" code:-1 userInfo:nil];
+    }).then(^(NSString *str){
+        NSLog(@"then5 : %@", str);
+        return @"Sixth";
+    }).catch(^(NSError *err){
+        NSLog(@"Error : %@", err);
+    });
+    
+    
 }
 
 
@@ -48,9 +78,7 @@
 
 - (AnyPromise *)testSome {
     return [AnyPromise promiseWithResolverBlock:^(PMKResolver resolver) {
-        id sth;
         /* 关键看sth是不是一个promise */
-        resolver(sth);
     }];
 }
 
