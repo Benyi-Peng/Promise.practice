@@ -15,11 +15,20 @@ import Foundation
         super.init()
         // 尾随闭包的简写
         /*
-         body({(sth: Any?) in
+         
+         body(resolve: {(sth: Any?) in
          
          })
          这个尾随闭包，就是 resolve block. 是在异步业务逻辑完成的时候调用的。
-         resolve block 执行的参数， 就是要reslove 的 value. 
+         resolve block 执行的参数， 就是要reslove 的 value.
+         
+         resolve 一个 Promise 会发生什么？
+         resolve 一个 Promise 意味着如下操作 : [Promise的初始化方法中resolve了另一个Promise, 或者在then等流程控制中，return了另一个Promise.]
+         
+         比如说 PromiseA resolve 了 Promise B.
+         则A的尾随闭包不会在A resolve 的时候立即执行， 而是在B resolve 的时候执行。且 A 的尾随闭包的参数是 B resolve 的值，而不是B(B是A resolve 的值)。
+         
+         下一个Promise的业务代码真正被调用的时间点就是上一个Promise的box seal 的时候。
         */
         body {
             if let p = $0 as? AnyPromise {
@@ -45,13 +54,18 @@ import Foundation
              __pipe
              
              在 Promise chain 的前一个 Promise
+             pipe 的这个闭包，是在上一个promise resolve 的时候调用的。
              */
             self.__pipe { obj in
                 /*
-                 obj 就是 上一个 promise resolve 的 value
+                 obj 就是 上一个 promise resolve 的 value, 存储在上一个 Promise 的 box 中，
+                 当上一个 Promise（也就是此处的self） resolve的时候，
                  */
                 if !(obj is NSError) {
                     q.async {
+                        /*
+                         PMKCallVariadicBlock(block, obj)
+                         */
                         resolve(execute(obj)) // == reslove(PMKCallVariadicBlock(block, obj)). block 就是 then 里面的业务逻辑 
                     }
                 } else {
@@ -98,6 +112,10 @@ import Foundation
                 to(obj)
             }
         }
+        /*
+         如果是未决状态，接到handlers数组中，
+         如果是已决状态，直接执行。
+         */
         switch box.inspect() {
         case .pending:
             box.inspect {
