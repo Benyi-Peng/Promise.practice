@@ -26,9 +26,30 @@ import Foundation
          resolve 一个 Promise 意味着如下操作 : [Promise的初始化方法中resolve了另一个Promise, 或者在then等流程控制中，return了另一个Promise.]
          
          比如说 PromiseA resolve 了 Promise B.
-         则A的尾随闭包不会在A resolve 的时候立即执行， 而是在B resolve 的时候执行。且 A 的尾随闭包的参数是 B resolve 的值，而不是B(B是A resolve 的值)。
+         则A的尾随闭包（也就是A then 的那个）不会在A resolve 的时候立即执行， 而是在B resolve 的时候执行。且 A 的尾随闭包的参数是 B resolve 的值，而不是B(B是A resolve 的值)。
          
          下一个Promise的业务代码真正被调用的时间点就是上一个Promise的box seal 的时候。
+         
+         [Promise A].then(1) {
+             ... ...
+             return [Promise B];
+         }.then(2) ...
+         
+         then(1) resolve 的时候，他并不会调用
+         
+         一共出现了 4 个Promise A -> then1 -> then(2)
+                                        \
+                                         \-> Promise B
+         
+         Promise A +------> then(1) +------> then(2)
+                                 +
+                                 |
+                                 |
+                                 +--> Promise B
+         
+         
+         
+         
         */
         body {
             if let p = $0 as? AnyPromise {

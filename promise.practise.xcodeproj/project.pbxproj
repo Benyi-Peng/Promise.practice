@@ -17,7 +17,7 @@
 		8EA1CB5D20DD185500093435 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EA1CB5C20DD185500093435 /* main.m */; };
 		8EA1CB6720DD185500093435 /* promise_practiseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EA1CB6620DD185500093435 /* promise_practiseTests.m */; };
 		8EA1CB7220DD185500093435 /* promise_practiseUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EA1CB7120DD185500093435 /* promise_practiseUITests.m */; };
-		8EA1CB8120DDD98A00093435 /* SomePromise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA1CB8020DDD98A00093435 /* SomePromise.swift */; };
+		8EA1CB8120DDD98A00093435 /* BViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA1CB8020DDD98A00093435 /* BViewController.swift */; };
 		B77F3AA5C6735EF994DC0EF9 /* Pods_promise_practiseUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0282940C2DA6738DE3B6FF9F /* Pods_promise_practiseUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -63,7 +63,7 @@
 		8EA1CB7120DD185500093435 /* promise_practiseUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = promise_practiseUITests.m; sourceTree = "<group>"; };
 		8EA1CB7320DD185500093435 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8EA1CB7F20DDD98A00093435 /* promise.practise-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "promise.practise-Bridging-Header.h"; sourceTree = "<group>"; };
-		8EA1CB8020DDD98A00093435 /* SomePromise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SomePromise.swift; sourceTree = "<group>"; };
+		8EA1CB8020DDD98A00093435 /* BViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BViewController.swift; sourceTree = "<group>"; };
 		B52D6C781A7F0FAB40426405 /* Pods_promise_practise.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_promise_practise.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA8C476C00B39C4654FDE115 /* Pods_promise_practiseTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_promise_practiseTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -135,7 +135,7 @@
 				8EA1CB4E20DD185500093435 /* AppDelegate.m */,
 				8EA1CB5020DD185500093435 /* ViewController.h */,
 				8EA1CB5120DD185500093435 /* ViewController.m */,
-				8EA1CB8020DDD98A00093435 /* SomePromise.swift */,
+				8EA1CB8020DDD98A00093435 /* BViewController.swift */,
 				8EA1CB5320DD185500093435 /* Main.storyboard */,
 				8EA1CB5620DD185500093435 /* Assets.xcassets */,
 				8EA1CB5820DD185500093435 /* LaunchScreen.storyboard */,
@@ -393,7 +393,7 @@
 				8EA1CB5220DD185500093435 /* ViewController.m in Sources */,
 				8EA1CB5D20DD185500093435 /* main.m in Sources */,
 				8EA1CB4F20DD185500093435 /* AppDelegate.m in Sources */,
-				8EA1CB8120DDD98A00093435 /* SomePromise.swift in Sources */,
+				8EA1CB8120DDD98A00093435 /* BViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

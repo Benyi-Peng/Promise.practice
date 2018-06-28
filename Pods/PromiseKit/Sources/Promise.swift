@@ -46,7 +46,14 @@ public class Promise<T>: Thenable, CatchMixin {
     public init(error: Error) {
         box = SealedBox(value: .rejected(error))
     }
-
+    
+    /*
+     伪代码：
+     Promise_A.init {
+        bridge B
+     }.then Promise_C
+     B -> A -> C 
+     */
     /// Initialize a new promise bound to the provided `Thenable`.
     public init<U: Thenable>(_ bridge: U) where U.T == T {
         box = EmptyBox()
