@@ -11,87 +11,55 @@
 #import <PromiseKit/PromiseKit.h>
 #import <PromiseKit/PromiseKit-Swift.h>
 
-@interface ViewController ()
-@property (weak, nonatomic) IBOutlet UILabel *greet1;
-@property (weak, nonatomic) IBOutlet UILabel *greet2;
-@property (weak, nonatomic) IBOutlet UILabel *greet3;
 
+@interface ViewController () <UITableViewDataSource, UITableViewDelegate>
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+
+@property (strong, nonatomic) NSArray<NSString *> *data1;
+@property (strong, nonatomic) NSArray<NSString *> *data2;
+@property (strong, nonatomic) NSArray<NSString *> *data3;
 @end
 
 @implementation ViewController
 
+- (NSArray *)d1 {
+    return @[@"wash face", @"wash teeth", @"eat breakfast"];
+}
+
+- (NSArray *)d2 {
+    return @[@"read book", @"do homework", @"relax"];
+}
+
+- (NSArray *)d3 {
+    return @[@"play with dog", @"play video game", @"watch movie"];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-//    [[self getFirstGreet] then:^(id x){
-//
-//    }];
-//    [self getGreeting].then(^(NSString *name){
-//        [self getSecondPeople:name];
-////        return [NSError errorWithDomain:@"First stage error" code:100 userInfo:@{@"msg":@"You stupid."}];
-//        return nil;
-//    }).then(^(){
-//        NSLog(@"The second stage ...");
-//    }).catch(^(NSError *error){
-//        NSLog(@"error :%@", error);
-//    });
-    
-//    AnyPromise *p = [[self getFirstGreet] then](@1);
-//    [[[self getFirstGreet] then](@"Any thing...") then];
-//    [self getFirstGreet].then(@1).then(@2).then(@3);
-    
-    [AnyPromise promiseWithResolverBlock:^(PMKResolver _Nonnull resolve) {
-        dispatch_async(dispatch_get_global_queue(0, 0), ^{
-            sleep(3);
-            resolve(@"First");
-        });
-    }].thenOn(dispatch_get_global_queue(0, 0) ,^(NSString *str){
-        sleep(3);
-        NSLog(@"then1 : %@", str);
-        return @"Second";
-    }).thenOn(dispatch_get_global_queue(0, 0) ,^(NSString *str){
-        sleep(3);
-        NSLog(@"then2 : %@", str);
-        return @"Third";
-    }).thenOn(dispatch_get_global_queue(0, 0) ,^(NSString *str){
-        sleep(3);
-        NSLog(@"then3 : %@", str);
-        return @"Forth";
-    }).then(^(NSString *str){
-        NSLog(@"then4 : %@", str);
-        return 0 ? @"Fifth" : [NSError errorWithDomain:@"THEN4 ERROR" code:-1 userInfo:nil];
-    }).then(^(NSString *str){
-        NSLog(@"then5 : %@", str);
-        return @"Sixth";
-    }).catch(^(NSError *err){
-        NSLog(@"Error : %@", err);
-    });
-    
+    _data1 = [NSArray array];
+    _data2 = [NSArray array];
+    _data3 = [NSArray array];
+    [self getTasks1];
 }
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     
 }
 
-- (AnyPromise *)testSome {
-    return [AnyPromise promiseWithResolverBlock:^(PMKResolver resolver) {
-        /* 关键看sth是不是一个promise */
-    }];
-}
-
-- (AnyPromise *)getGreeting {
+- (AnyPromise *)getTasks1 {
     return [AnyPromise promiseWithAdapterBlock:^(PMKAdapter  _Nonnull adapter) {
-        NSString *greet1 = @"Hey!";
-        NSString *greet2 = @"Good morning!";
-        NSString *name = @"Mr. XXX";
-        NSString *urlStr = [NSString stringWithFormat:@"https://httpbin.org/post?greet1=%@&greet2=%@&name=%@", greet1, greet2, name];
+        NSString *urlStr = @"https://httpbin.org/post";
         urlStr = [urlStr stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
         NSURL *url = [NSURL URLWithString:urlStr];
         
+        NSDictionary *para = @{@"task":[self d1]};
+        NSData *paraData = [NSJSONSerialization dataWithJSONObject:para options:0 error:nil];
+        
         NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
         request.HTTPMethod = @"POST";
+        request.HTTPBody = paraData;
         
         NSURLSession *session = [NSURLSession sharedSession];
         NSURLSessionDataTask *task = [session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
@@ -103,13 +71,16 @@
                 if (parseError) {
                     adapter(nil, parseError);
                 } else {
-                    if ([dict[@"args"] valueForKey:@"greet1"] && [dict[@"args"] valueForKey:@"greet2"] && [dict[@"args"] valueForKey:@"name"]) {
+                    NSLog(@"dict : %@", dict);
+                    
+                    if ([dict[@"args"] valueForKey:@"greet1"] &&
+                        [dict[@"args"] valueForKey:@"greet2"] &&
+                        [dict[@"args"] valueForKey:@"name"]) {
                         NSString *name = [dict[@"args"] valueForKey:@"name"];
                         // resolve 了一个字符串(name)，下个打招呼要用到
                         adapter(name, nil);
                         dispatch_async(dispatch_get_main_queue(), ^{
-                            self.greet1.text = [NSString stringWithFormat:@"%@", [dict[@"args"] valueForKey:@"greet1"]];
-                            self.greet2.text = [NSString stringWithFormat:@"%@", [dict[@"args"] valueForKey:@"greet2"]];
+
                         });
                     } else {
                         NSError *e = [[NSError alloc] initWithDomain:@"[Weather]Cannot find key." code:0 userInfo:nil];
@@ -146,7 +117,7 @@
                     if (name) {
                         adapter(nil, nil);
                         dispatch_async(dispatch_get_main_queue(), ^{
-                            self.greet3.text = [NSString stringWithFormat:@"%@, %@", name, greet];
+//                            self.greet3.text = [NSString stringWithFormat:@"%@, %@", name, greet];
                         });
                     } else {
                         NSError *e = [[NSError alloc] initWithDomain:@"[Weather]Cannot find key." code:0 userInfo:nil];
@@ -159,6 +130,23 @@
     }];
 }
 
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return _data1.count + _data2.count + _data3.count;
+}
 
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell1"];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"cell1"];
+    }
+    if (indexPath.row < _data1.count) {
+        cell.textLabel.text = _data1[indexPath.row];
+    } else if (indexPath.row < _data1.count + _data2.count) {
+        cell.textLabel.text = _data2[indexPath.row - _data1.count];
+    } else if (indexPath.row < _data1.count + _data2.count + _data3.count) {
+        cell.textLabel.text = _data3[indexPath.row - _data1.count - _data2.count];
+    }
+    return cell;
+}
 
 @end

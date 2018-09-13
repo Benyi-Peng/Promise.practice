@@ -137,6 +137,10 @@ NSString *const PMKErrorDomain = @"PMKErrorDomain";
     }
 }
 
+- (void)dealloc {
+    NSLog(@"%s",__func__);
+}
+
 @end
 
 
